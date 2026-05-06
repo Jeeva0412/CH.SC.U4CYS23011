@@ -1,0 +1,24 @@
+{
+  "name": "ch.sc.u4cys23011",
+  "version": "1.0.0",
+  "description": "",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeeva0412/CH.SC.U4CYS23011.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jeeva0412/CH.SC.U4CYS23011/issues"
+  },
+  "homepage": "https://github.com/Jeeva0412/CH.SC.U4CYS23011#readme",
+  "dependencies": {
+    "axios": "^1.16.0"
+  }
+}
