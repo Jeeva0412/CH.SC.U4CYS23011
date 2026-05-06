@@ -8,11 +8,12 @@ function setToken(token) {
 
 async function logToService(level, packageName, message) {
     const url = 'http://20.207.122.201/evaluation-service/logs';
+    const fullMessage = `[${packageName}] ${message}`;
     const payload = {
         stack: 'backend',
         level: level,
-        package: packageName,
-        message: message
+        package: 'controller',
+        message: fullMessage.length > 48 ? fullMessage.substring(0, 45) + '...' : fullMessage
     };
 
     const config = {};
@@ -26,6 +27,9 @@ async function logToService(level, packageName, message) {
     } catch (error) {
         // Fallback to console if service is down
         console.error(`Logging service failed: ${error.message}`);
+        if (error.response && error.response.data) {
+            console.error('Error details:', JSON.stringify(error.response.data));
+        }
     }
 }
 
